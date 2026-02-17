@@ -10,7 +10,7 @@ This skill provides a structured framework for conducting a comprehensive weekly
 ## Workflow
 
 ### 1. Data Collection
-- Pull the **Weekly Averages** from the client's master tracker using the `google-sheet-manager` skill.
+- Pull the **Weekly Averages** from the client's master tracker using the `excel-tracker` skill.
 - Compare the current week's averages against the previous week and the set targets.
 
 ### 2. Analysis

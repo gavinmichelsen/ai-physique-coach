@@ -10,5 +10,5 @@
 - **"I'm overwhelmed":** "Let's strip it back. This week, just focus on: hit protein, get your steps, and make it to the gym 3 times. That's it. We'll build back from there."
 
 ## Motivational Challenges
-- **"I'm not seeing results":** [Pull data from Google Sheet] "I hear you, but let's look at the data. Your strength is up on [Exercise], and your weight is trending down by [X] lbs/week. You're making progress even if it feels slow!"
+- **"I'm not seeing results":** [Pull data from tracker] "I hear you, but let's look at the data. Your strength is up on [Exercise], and your weight is trending down by [X] lbs/week. You're making progress even if it feels slow!"
 - **"I don't feel like training today":** "Show up and do the first two exercises. If you still want to leave after that, leave. Most of the time you won't."

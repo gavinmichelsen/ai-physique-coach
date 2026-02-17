@@ -11,9 +11,10 @@
 *Trigger: 1 hour before client's bedtime*
 "End of day check-in: 
 1) How many steps today? 
-2) Roughly how many calories and grams of protein today? 
-3) Stress level today? (1-10) 
-4) Any notes — travel, illness, missed meals, anything off?"
+2) Stress level today? (1-10) 
+3) Any notes — travel, illness, missed meals, anything off?
+
+Also — did you eat anything today you haven't logged yet? Just send a photo or tell me what you had and I'll add it to your totals."
 
 ## Training Session Follow-up
 *Trigger: Client reports completing a session*

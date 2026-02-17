@@ -36,7 +36,7 @@ This skill provides the evidence-based logic for transitioning clients between d
 2.  **Recalculate:** Use the `tdee-calculation` skill with the client's current weight.
 3.  **Set New Targets:** Use the `diet-recommendation` and `cardio-programming` skills to set the new protocol.
 4.  **Communicate:** Use the format in `templates/transition_protocol_template.md` to explain the "why" and manage scale expectations.
-5.  **Log History:** Update the **Program History** tab in the master tracker via `google-sheet-manager`.
+5.  **Log History:** Update the **Program History** tab in the master tracker via `excel-tracker`.
 
 ## Resources
 

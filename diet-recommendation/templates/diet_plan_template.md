@@ -88,5 +88,5 @@ This helps us compare your tracked intake against your actual body composition c
 
 ## Onboarding Notes
 - **Week 1-2 Focus:** Prioritize hitting your calorie and protein targets. Do not stress about precise fat and carb splits yet.
-- **Tracking Strategy:** [e.g., Use MyFitnessPal to log meals. Weigh yourself daily in the morning and report the weekly average.]
+- **Tracking Strategy:** Log meals by sending a photo or text description to your coach (e.g., "I just had a Fairlife protein shake" or snap a photo of your plate). The AI tracks your daily calories and macros — no external apps needed. Weigh yourself daily in the morning and report the weekly average.
 - **Next Check-In:** [Date]

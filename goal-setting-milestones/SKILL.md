@@ -26,7 +26,7 @@ This skill provides a structured framework for setting realistic goals, breaking
 
 ## Best Practices
 
-- **Data-Driven:** Base all timeline adjustments on the client's actual weekly averages from the `google-sheet-manager`.
+- **Data-Driven:** Base all timeline adjustments on the client's actual weekly averages from the `excel-tracker`.
 - **Encouraging Tone:** Maintain a supportive "coach" persona that values long-term adherence over short-term speed.
 - **Visual Progress:** Use milestones to help the client see the "big picture" and stay motivated during slower phases.
 

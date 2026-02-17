@@ -1,11 +1,15 @@
 ---
 name: meal-photo-estimator
-description: "Analyzes a photo or text description of a meal and provides estimated calorie and macronutrient breakdown. Use when client sends a food photo OR lists meal ingredients with quantities."
+description: "Primary meal logging method. Analyzes food photos or text descriptions to estimate calories and macros. This is how ALL client nutrition is tracked — no external apps (MyFitnessPal, MacroFactor, etc.) are used. Clients simply send a photo or text message describing what they ate."
 ---
 
-# Meal Photo & Text Estimator
+# AI Meal Logger
 
-This skill estimates the nutritional content of a meal from either a photo or a text-based ingredient list.
+This is the primary and only method for tracking client nutrition. Clients do NOT use external tracking apps. Instead, they send:
+- A **photo** of their meal, or
+- A **text description** (e.g., "I just had a Fairlife protein shake" or "16oz NY strip with rice and broccoli")
+
+The coach estimates calories and macros, maintains a running daily total, and logs everything to the client's tracker.
 
 ## Preferred Method: Text-Based Calculation
 

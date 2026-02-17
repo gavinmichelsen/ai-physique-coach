@@ -16,4 +16,10 @@
 - **Confidence:** [e.g., High/Medium/Low based on photo clarity]
 - **Accuracy Disclaimer:** This is an approximation (±15-20%). Actual values vary by preparation and hidden ingredients.
 
-Would you like me to log this to your Google Sheet?
+## Daily Running Total
+| Metric | Today So Far | Target | Remaining |
+| :--- | :--- | :--- | :--- |
+| **Calories** | [Number] | [Number] | [Number] |
+| **Protein** | [Number] g | [Number] g | [Number] g |
+
+I've logged this to your tracker. Let me know when you eat again — just send a photo or tell me what you had.

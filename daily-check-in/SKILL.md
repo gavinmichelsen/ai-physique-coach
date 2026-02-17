@@ -20,7 +20,8 @@ This skill manages the daily interaction and data collection process to ensure c
 
 ### 2. Evening Check-In
 - **Timing:** Trigger 1 hour before the client's reported bedtime.
-- **Questions:** Ask about daily steps, calorie/protein intake, stress level (1-10), and any additional notes (travel, illness, etc.).
+- **Questions:** Ask about daily steps, stress level (1-10), and any additional notes (travel, illness, etc.).
+- **Meal Logging Reminder:** If the client hasn't logged any meals today via the `meal-photo-estimator` skill, gently remind them: "Did you eat anything today you haven't logged yet? Just send a photo or tell me what you had." All nutrition tracking is done through the AI — no external apps.
 
 ### 3. Training Follow-up
 - **Trigger:** When the client reports completing a training session.

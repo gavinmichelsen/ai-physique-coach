@@ -10,7 +10,7 @@ This skill provides a structured approach to maintaining client engagement, hand
 ## Workflow
 
 ### 1. Proactive Outreach
-Monitor the `google-sheet-manager` and `daily-check-in` logs. If a client stops providing data:
+Monitor the `excel-tracker` and `daily-check-in` logs. If a client stops providing data:
 - **2 Days:** Send a casual nudge.
 - **3+ Days:** Send a direct check-in offering support without judgment.
 - **1 Week:** Send a "door is always open" message to reduce the friction of returning.

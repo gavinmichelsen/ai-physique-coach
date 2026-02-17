@@ -18,7 +18,7 @@ When a client asks what the coach can do:
 ### 2. Onboarding Wizard
 Act as a guide to move the client through the intake process without missing steps:
 - **Step 1:** Trigger `physique-coach-onboarding`.
-- **Step 2:** Trigger `google-sheet-manager` to create the tracker.
+- **Step 2:** Trigger `excel-tracker` to create the tracker.
 - **Step 3:** Trigger `goal-setting-milestones`.
 - **Step 4:** Trigger `tdee-calculation`, `diet-recommendation`, and `resistance-training-program`.
 - **Step 5:** Set up `daily-check-in` schedules.

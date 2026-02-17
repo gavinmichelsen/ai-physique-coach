@@ -1,6 +1,6 @@
-# Google Sheet Schema: Physique Coach Master Tracker
+# Physique Coach Master Tracker Schema
 
-This schema defines the structure for the client's master tracking Google Sheet.
+This schema defines the structure for the client's master tracking spreadsheet.
 
 ## Tab 1: Daily Log
 **Purpose:** Daily tracking of weight, nutrition, and recovery metrics.
