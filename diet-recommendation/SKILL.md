@@ -1,48 +1,65 @@
----
-name: diet-recommendation
-description: "Sets calorie and macronutrient targets based on TDEE, body fat %, and goal. Use after TDEE calculation, during phase transitions, or when adjusting nutrition."
----
+# Diet Recommendation Skill
 
-# Diet Recommendation
+This skill provides comprehensive, evidence-based nutrition protocols, including a robust energy balance calculator, to support physique transformation goals. It integrates scientific principles of macronutrient distribution, meal timing, and dietary adherence to optimize results for various body compositions and activity levels.
 
-This skill provides the logic for setting precise nutritional targets based on a client's physiological data and physique goals.
+## Key Features
 
-## Calorie Target Logic
+*   **Personalized Macronutrient Calculation**: Dynamically adjusts protein, carbohydrate, and fat intake based on individual metabolic rate, activity level, and specific physique goals (e.g., fat loss, muscle gain, maintenance).
+*   **Energy Balance Optimization**: Utilizes a sophisticated calculator to determine daily caloric needs, ensuring precise energy intake for desired outcomes while minimizing metabolic adaptation.
+*   **Meal Timing Strategies**: Offers guidance on optimal meal frequency and timing to support nutrient partitioning, satiety, and workout performance.
+*   **Dietary Adherence Support**: Provides practical strategies for meal preparation, food selection, and behavioral modifications to enhance long-term adherence to the nutrition plan.
+*   **Evidence-Based Protocols**: All recommendations are grounded in current scientific literature and best practices in sports nutrition and exercise physiology.
 
-### 1. Fat Loss
-- **Client <=15% bf (male) / <=25% (female):** 15% deficit (TDEE x 0.85).
-- **Client >15% bf (male) / >25% (female):** 25% deficit (TDEE x 0.75).
-- **Calorie Floor:** Never prescribe below **bodyweight (lbs) x 10**. If the deficit would drop below this, increase activity/expenditure instead.
+## Usage
 
-### 2. Lean Bulk
-- **Target:** Eat at **Maintenance (TDEE)**.
-- **Philosophy:** No explicit surplus is required. Muscle growth only requires ~40-100 extra kcal/day, which is achieved through ad libitum eating at maintenance. Focus on progressive overload.
+To generate a personalized diet plan, invoke this skill with the following parameters:
 
-### 3. Maintenance / Recomposition
-- **Target:** Eat at **Maintenance (TDEE)**.
+*   `goal`: (string, required) The primary physique goal (e.g., "fat loss", "muscle gain", "maintenance").
+*   `weight_kg`: (number, required) Current body weight in kilograms.
+*   `height_cm`: (number, required) Current height in centimeters.
+*   `age`: (number, required) Current age in years.
+*   `gender`: (string, required) Biological gender ("male" or "female").
+*   `activity_level`: (string, required) Describes daily physical activity (e.g., "sedentary", "lightly active", "moderately active", "very active", "extremely active").
+*   `body_fat_percentage`: (number, optional) Estimated body fat percentage. Used for more precise calculations.
+*   `dietary_preferences`: (array of strings, optional) Any specific dietary preferences or restrictions (e.g., "vegetarian", "vegan", "gluten-free", "dairy-free").
+*   `allergies`: (array of strings, optional) Known food allergies.
 
-## Macronutrient Setup
+## Example Invocation
 
-1.  **Protein:** 0.75-0.82g per lb of **goal bodyweight**. Use the higher end during fat loss to preserve lean mass.
-2.  **Fat:** Minimum 0.3g per lb of bodyweight, and never below 20% of total calories. Default to **0.35g/lb**.
-3.  **Carbohydrates:** Remaining calories after protein and fat are set. Carbs are essential for fueling training performance.
+```json
+{
+    "goal": "muscle gain",
+    "weight_kg": 75,
+    "height_cm": 175,
+    "age": 30,
+    "gender": "male",
+    "activity_level": "moderately active",
+    "body_fat_percentage": 15,
+    "dietary_preferences": ["no red meat"],
+    "allergies": ["peanuts"]
+}
+```
 
-## Adherence & Strategy
+## Output
 
-- **No Refeeds:** Not supported by evidence; do not prescribe.
-- **Diet Breaks:** Available during extended cuts (6+ weeks) if the client is struggling. 1-2 weeks at maintenance (increase calories via carbs), then resume the deficit. Frame as a "strategic pause."
-- **Fiber:** Recommend 25-35g/day.
-- **Hydration:** Minimum half bodyweight (lbs) in ounces of water daily.
+The skill will return a detailed diet plan, including:
 
-## Workflow
+*   **Calculated Daily Caloric Intake**: Total calories recommended per day.
+*   **Macronutrient Breakdown**: Grams and percentages of protein, carbohydrates, and fats.
+*   **Sample Meal Plan**: A daily meal structure with suggested food items and portion sizes, tailored to the user's preferences and goals.
+*   **Hydration Guidelines**: Recommendations for daily water intake.
+*   **Supplement Recommendations**: Optional suggestions for supplements that may support the user's goals.
 
-1.  **Pull Data:** Review TDEE, body fat %, and current goal.
-2.  **Calculate Calories:** Apply the deficit or maintenance logic based on the goal and body fat.
-3.  **Set Macros:** Follow the protein -> fat -> carb hierarchy.
-4.  **Check Floor:** Ensure calories are not below the bodyweight x 10 threshold.
-5.  **Present Plan:** Use the format in `templates/diet_plan_template.md`.
-6.  **Onboarding Note:** For clients new to tracking, advise focusing on the protein target first for the first week.
+## Scientific Basis
 
-## Resources
+The energy balance calculator and macronutrient recommendations are based on established equations and guidelines, including:
 
-- `templates/diet_plan_template.md`: The standard format for presenting calorie and macro targets.
+*   **Mifflin-St Jeor Equation**: Used for calculating Basal Metabolic Rate (BMR) [1].
+*   **Activity Factor Multipliers**: Applied to BMR to determine Total Daily Energy Expenditure (TDEE) [2].
+*   **Macronutrient Distribution Ranges**: Aligned with recommendations from leading sports nutrition organizations for optimal performance and body composition [3].
+
+### References
+
+[1] Mifflin, M. D., St Jeor, S. T., Hill, L. A., Scott, B. J., Daugherty, S. A., & Schundler, A. (1990). A new predictive equation for resting energy expenditure in healthy individuals. *The American Journal of Clinical Nutrition*, *51*(2), 241-247. [Link](https://pubmed.ncbi.nlm.nih.gov/2309541/)
+[2] American College of Sports Medicine. (2018). *ACSM's Guidelines for Exercise Testing and Prescription* (10th ed.). Wolters Kluwer.
+[3] International Society of Sports Nutrition. (2017). ISSN position stand: protein and exercise. *Journal of the International Society of Sports Nutrition*, *14*(1), 20. [Link](https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8)
